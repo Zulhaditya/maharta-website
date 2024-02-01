@@ -24,6 +24,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
+  <!-- 
+    - bootstrap 5
+   -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
 </head>
 
 <body id="top">
@@ -33,37 +41,39 @@
   -->
 
   <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-        <ion-icon name="business-outline"></ion-icon> Maharta Residence
-      </a>
-
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
-        <ion-icon name="close-outline" aria-hidden="true" class="close-icon"></ion-icon>
-      </button>
-
+    <div class="text-center">
+        <img src="./assets/images/logo.png" class="rounded mx-auto d-block" width="200">
     </div>
   </header>
 
   <main>
     <article class="article">
-      <section class="section hero" aria-label="hero">
-        <div class="container">
-          <div class="hero-bg">
-            <div class="hero-content">
-              <h1 class="h1 hero-title">
-                Maharta <span class="span">Residence</span>
-              </h1>
-              <p class="hero-text">
-                Maharta Residence adalah sebuah hunian etnik modern yang berada di kawasan premium.
-                Dengan sentuhan etnik joglo yang khas, rumah ini menawarkan keindahan alam yang beragam.
-              </p>
-            </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/images/slide-1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/slide-2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/images/slide-3.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
-      </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 
       <!-- 
         - #PROPERTY
@@ -72,9 +82,9 @@
       <section class="section property" aria-label="property">
         <div class="container">
 
-          <h2 class="h2 section-title">Unit Kami</h2>
+          <h1 class="h1 section-title">Unit Kami</h1>
 
-          <p class="section-text" style="color: gray;">
+          <p class="section-text" style="color: gray; font-size: 15px;">
             Terdapat berbagai variasi hunian yang bisa anda tempati seperti:
           </p>
 
@@ -92,14 +102,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -116,12 +129,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -130,7 +140,7 @@
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
+                  <img src="./assets/images/property-2.jpg" width="800" height="533" loading="lazy"
                     alt="Type 142, Jalan Seroja" class="img-cover">
                 </figure>
 
@@ -140,14 +150,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -164,12 +177,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -178,7 +188,7 @@
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
+                  <img src="./assets/images/property-3.jpg" width="800" height="533" loading="lazy"
                     alt="Type 142, Jalan Seroja" class="img-cover">
                 </figure>
 
@@ -188,14 +198,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -212,12 +225,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -226,7 +236,7 @@
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
+                  <img src="./assets/images/property-4.jpg" width="800" height="533" loading="lazy"
                     alt="Type 142, Jalan Seroja" class="img-cover">
                 </figure>
 
@@ -236,14 +246,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -260,12 +273,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -274,7 +284,7 @@
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
+                  <img src="./assets/images/property-5.jpg" width="800" height="533" loading="lazy"
                     alt="Type 142, Jalan Seroja" class="img-cover">
                 </figure>
 
@@ -284,14 +294,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -308,12 +321,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -322,7 +332,7 @@
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
+                  <img src="./assets/images/property-6.jpg" width="800" height="533" loading="lazy"
                     alt="Type 142, Jalan Seroja" class="img-cover">
                 </figure>
 
@@ -332,14 +342,17 @@
 
                 <div class="card-content">
                   <h3 class="h3">
-                    <a href="#" class="card-title">Type 142, Jalan Seroja</a>
+                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
                   </h3>
+                  <div>
+                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
+                  </div>
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 Meter</span>
+                      <span class="item-text">800 m²</span>
                     </li>
 
                     <li class="card-item">
@@ -356,12 +369,9 @@
                       <span class="item-text">4 Toilet</span>
                     </li>
                   </ul>
-
-                  <div class="card-meta">
-                    <div>
-                      <span class="meta-title">Harga</span>
-                      <span class="meta-text">Rp. 2.200.000.000</span>
-                    </div>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
@@ -377,9 +387,9 @@
       <section class="section service" aria-label="service">
         <div class="container">
 
-          <h2 class="h2 section-title">Fasilitas Sekitar</h2>
+          <h1 class="h1 section-title">Fasilitas Sekitar</h1>
 
-          <p class="section-text" style="color: gray;">
+          <p class="section-text" style="color: gray; font-size: 15px;">
             Ada berbagai fasilitas yang bisa dimanfaatkan untuk menunjang produktivitas yaitu:
           </p>
 
@@ -387,15 +397,15 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="school"></ion-icon>
+                  <ion-icon name="school" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Pusat Pendidikan</h3>
                 <div class="service-detail">
                   <ul>
-                    <li>- Universitas Teknologi Yogyakarta (1 Menit)</li>
-                    <li>- Universitas Gadjah Mada (4 Menit)</li>
-                    <li>- Universitas Negeri Yogyakarta (5 Menit)</li>
-                    <li>- Universitas Aisyiyah Yogyakarta (5 Menit)</li>
+                    <li>• Universitas Teknologi Yogyakarta (1 Menit)</li>
+                    <li>• Universitas Gadjah Mada (4 Menit)</li>
+                    <li>• Universitas Negeri Yogyakarta (5 Menit)</li>
+                    <li>• Universitas Aisyiyah Yogyakarta (5 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -404,15 +414,15 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="bag-handle"></ion-icon>
+                  <ion-icon name="bag-handle" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Pusat Perbelanjaan</h3>
                 <div class="service-detail-store-other">
                   <ul>
-                    <li>- Jogja City Mall (2 Menit)</li>
-                    <li>- Pakuwon Mall (8 Menit)</li>
-                    <li>- Sleman City Hall (10 Menit)</li>
-                    <li>- Plaza Ambarukmo (12 Menit)</li>
+                    <li>• Jogja City Mall (2 Menit)</li>
+                    <li>• Pakuwon Mall (8 Menit)</li>
+                    <li>• Sleman City Hall (10 Menit)</li>
+                    <li>• Plaza Ambarukmo (12 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -421,15 +431,15 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="business"></ion-icon>
+                  <ion-icon name="business" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Pusat Pelayanan Publik</h3>
                 <div class="service-detail">
                   <ul>
-                    <li>- Rumah Sakit Akademik UGM (2 Menit)</li>
-                    <li>- Rumah Sakit Sardjito (8 Menit)</li>
-                    <li>- Polda Sleman (8 Menit)</li>
-                    <li>- Pemda Sleman (10 Menit)</li>
+                    <li>• Rumah Sakit Akademik UGM (2 Menit)</li>
+                    <li>• Rumah Sakit Sardjito (8 Menit)</li>
+                    <li>• Polda Sleman (8 Menit)</li>
+                    <li>• Pemda Sleman (10 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -438,14 +448,14 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="car"></ion-icon>
+                  <ion-icon name="car" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Akses Jalan</h3>
                 <div class="service-detail">
                   <ul>
-                    <li>- Ringroad Barat (1 Menit)</li>
-                    <li>- Jl. Magelang - Yogyakarta (3 Menit)</li>
-                    <li>- Entrance Toll - Joglo Semar (5 Menit)</li>
+                    <li>• Ringroad Barat (1 Menit)</li>
+                    <li>• Jl. Magelang - Yogyakarta (3 Menit)</li>
+                    <li>• Entrance Toll - Joglo Semar (5 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -454,14 +464,14 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="train"></ion-icon>
+                  <ion-icon name="train" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Sarana Transportasi</h3>
                 <div class="service-detail">
                   <ul>
-                    <li>- Terminal Jombor (1 Menit)</li>
-                    <li>- Stasiun Tugu/Lempuyangan (10 Menit)</li>
-                    <li>- Bandara Y.I.A (30 Menit)</li>
+                    <li>• Terminal Jombor (1 Menit)</li>
+                    <li>• Stasiun Tugu/Lempuyangan (10 Menit)</li>
+                    <li>• Bandara Y.I.A (30 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -470,14 +480,14 @@
             <li>
               <div class="service-card">
                 <div class="card-icon">
-                  <ion-icon name="pricetags"></ion-icon>
+                  <ion-icon name="pricetags" style="color: var(--blue-primary);"></ion-icon>
                 </div>
                 <h3 class="h3 card-title">Lainnya</h3>
                 <div class="service-detail-store-other">
                   <ul>
-                    <li>- Tugu Jogja (12 Menit)</li>
-                    <li>- Malioboro (15 Menit)</li>
-                    <li>- Titik 0 KM (17 Menit)</li>
+                    <li>• Tugu Jogja (12 Menit)</li>
+                    <li>• Malioboro (15 Menit)</li>
+                    <li>• Titik 0 KM (17 Menit)</li>
                   </ul>
                 </div>
               </div>
@@ -493,23 +503,32 @@
       <section class="section contact" aria-label="contact">
         <div class="container">
 
-          <h2 class="h2 section-title">Lokasi Maharta</h2>
+          <h1 class="h1 section-title">Lokasi Maharta</h1>
 
-          <p class="section-text" style="color: gray;">
+          <p class="section-text" style="color: gray; font-size: 14px;">
             Jl. Ring Road Utara No.88 Trini, Trihanggo, Kec. Gamping, Kabupaten Sleman, Daerah Istimewa Yogyakarta
           </p>
 
-          <button class="btn btn-primary">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.396191673964!2d110.34954747500466!3d-7.7477333922710185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59007ee9a927%3A0xc7c0e43bdaf27b8e!2sMaharta%20Residence!5e0!3m2!1sen!2sid!4v1706787573009!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <button class="btn btn-primary btn-lg" style="background: var(--blue-primary); margin-top: 50px;">
             <ion-icon name="call-outline"></ion-icon>
-
-            <span class="span">Hubungi Kami</span>
+            <a href="">
+              Hubungi Kami
+            </a>
           </button>
-
         </div>
       </section>
-
     </article>
   </main>
+
+  <!-- 
+    - # Whatsapp Icon
+  -->
+  <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+  <i class="fa fa-whatsapp my-float"></i>
+  </a>
+
 
   <!-- 
     - #FOOTER
@@ -520,7 +539,7 @@
       <div class="container">
         <div class="footer-brand">
           <a href="#" class="logo">
-            <ion-icon name="business-outline"></ion-icon> Maharta Residence
+            <ion-icon name="business-outline" style="color: white;"></ion-icon> Maharta Residence
           </a>
           <p class="footer-text">
             Maharta Residence berlokasi di jantung Kota Yogyakarta. 5 menit ke Entrance Tol Joglo Semar, 1 menit ke Jl. Ring Road Barat,
@@ -535,7 +554,6 @@
           <li>
             <a href="#" class="footer-link">
               <ion-icon name="chevron-forward"></ion-icon>
-
               <span class="span">Tentang Kami</span>
             </a>
           </li>
@@ -595,26 +613,23 @@
           </li>
 
           <li class="footer-item">
-            <ion-icon name="location-outline"></ion-icon>
-
-            <address class="address">
+            <ion-icon name="location-outline" style="color: white;"></ion-icon>
+            <address class="address" style="font-size: 13px;">
               Jl. Ring Road Utara No.88,<br>
               Trini Trihanggo, Kec. Gamping,<br>
               Kabupaten Sleman,<br>
               Daerah Istimewa Yogyakarta
-              <a href="#" class="address-link">Lihat di Google Map</a>
+              <a href="https://maps.app.goo.gl/s3VomYu88vSe1Kp99" class="address-link" target="_blank">Lihat di Google Map</a>
             </address>
           </li>
 
           <li class="footer-item">
-            <ion-icon name="mail-outline"></ion-icon>
-
-            <a href="mailto:contact@example.com" class="footer-link">zulhaditya@gmail.com</a>
+            <ion-icon name="mail-outline" style="color: white;"></ion-icon>
+            <a href="mailto:contact@example.com" class="footer-link">maharta@gmail.com</a>
           </li>
 
           <li class="footer-item">
-            <ion-icon name="call-outline"></ion-icon>
-
+            <ion-icon name="call-outline" style="color: white;"></ion-icon>
             <a href="tel:+628738390" class="footer-link">+62 876-468-854</a>
           </li>
 
@@ -626,7 +641,7 @@
     <div class="footer-bottom">
       <div class="container">
 
-        <p class="copyright">
+        <p class="copyright" style="font-size: 14px;">
           &copy; 2024 Maharta Residence.
         </p>
 
@@ -681,6 +696,11 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 
+    - bootstrap 5
+  -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 
