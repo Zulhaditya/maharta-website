@@ -31,6 +31,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
 
 </head>
 
@@ -88,55 +93,7 @@
             Terdapat berbagai variasi hunian yang bisa anda tempati seperti:
           </p>
 
-          <ul class="property-list">
-            <li>
-              <div class="property-card">
-                <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-1.jpg" width="800" height="533" loading="lazy"
-                    alt="Type 142, Jalan Seroja" class="img-cover">
-                </figure>
-
-                <button class="card-action-btn" aria-label="add to favourite">
-                  <ion-icon name="heart" aria-hidden="true"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
-                  </h3>
-                  <div>
-                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
-                  </div>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">800 m²</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="bed-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Bed</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="man-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Toilet</span>
-                    </li>
-                  </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-
+          <ul class="property-list align-items-center justify-content-center">
             <li>
               <div class="property-card">
                 <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
@@ -158,27 +115,48 @@
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
+                        <ion-icon name="bed-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 m²</span>
+                      <span class="item-text">4 Kamar Tidur</span>
                     </li>
 
                     <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="cube-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">100 m² Luas Tanah</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
                       <div class="item-icon">
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
-                      <span class="item-text">4 Bed</span>
+                      <span class="item-text">4 Kamar Mandi</span>
                     </li>
 
-                    <li class="card-item">
+                    <li class="card-hidden card-items">
                       <div class="item-icon">
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
-                      <span class="item-text">4 Toilet</span>
+                      <span class="item-text">100 m² Luas Bangunan</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
+                      <div class="item-icon">
+                        <ion-icon name="cube-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">2 Carport</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
+                      <div class="item-icon">
+                        <ion-icon name="bed-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">3 Split</span>
                     </li>
                   </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center gap-4">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;" onclick="myFunction()">Detail Unit</button>
                     <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
@@ -206,176 +184,54 @@
                   <ul class="card-list">
                     <li class="card-item">
                       <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
+                        <ion-icon name="bed-outline"></ion-icon>
                       </div>
-                      <span class="item-text">800 m²</span>
+                      <span class="item-text">4 Kamar Tidur</span>
                     </li>
 
                     <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="cube-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">100 m² Luas Tanah</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
                       <div class="item-icon">
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
-                      <span class="item-text">4 Bed</span>
+                      <span class="item-text">4 Kamar Mandi</span>
                     </li>
 
-                    <li class="card-item">
+                    <li class="card-hidden card-items">
                       <div class="item-icon">
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
-                      <span class="item-text">4 Toilet</span>
+                      <span class="item-text">100 m² Luas Bangunan</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
+                      <div class="item-icon">
+                        <ion-icon name="cube-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">2 Carport</span>
+                    </li>
+
+                    <li class="card-hidden card-items">
+                      <div class="item-icon">
+                        <ion-icon name="bed-outline"></ion-icon>
+                      </div>
+                      <span class="item-text">3 Split</span>
                     </li>
                   </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-center gap-4">
+                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;" onclick="myFunction()">Detail Unit</button>
                     <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
                   </div>
                 </div>
               </div>
             </li>
 
-            <li>
-              <div class="property-card">
-                <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-4.jpg" width="800" height="533" loading="lazy"
-                    alt="Type 142, Jalan Seroja" class="img-cover">
-                </figure>
-
-                <button class="card-action-btn" aria-label="add to favourite">
-                  <ion-icon name="heart" aria-hidden="true"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
-                  </h3>
-                  <div>
-                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
-                  </div>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">800 m²</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="bed-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Bed</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="man-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Toilet</span>
-                    </li>
-                  </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-                <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-5.jpg" width="800" height="533" loading="lazy"
-                    alt="Type 142, Jalan Seroja" class="img-cover">
-                </figure>
-
-                <button class="card-action-btn" aria-label="add to favourite">
-                  <ion-icon name="heart" aria-hidden="true"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
-                  </h3>
-                  <div>
-                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
-                  </div>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">800 m²</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="bed-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Bed</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="man-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Toilet</span>
-                    </li>
-                  </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li>
-              <div class="property-card">
-                <figure class="card-banner img-holder" style="--width: 800; --height: 533;">
-                  <img src="./assets/images/property-6.jpg" width="800" height="533" loading="lazy"
-                    alt="Type 142, Jalan Seroja" class="img-cover">
-                </figure>
-
-                <button class="card-action-btn" aria-label="add to favourite">
-                  <ion-icon name="heart" aria-hidden="true"></ion-icon>
-                </button>
-
-                <div class="card-content">
-                  <h3 class="h3">
-                    <a href="#" class="card-title" style="margin-bottom: 10px; color: var(--blue-primary) !important;">Type 142, Jalan Seroja</a>
-                  </h3>
-                  <div>
-                    <span class="meta-text" style="font-size: 15px;">Rp. 2.200.000.000</span>
-                  </div>
-                  <ul class="card-list">
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="cube-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">800 m²</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="bed-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Bed</span>
-                    </li>
-
-                    <li class="card-item">
-                      <div class="item-icon">
-                        <ion-icon name="man-outline"></ion-icon>
-                      </div>
-                      <span class="item-text">4 Toilet</span>
-                    </li>
-                  </ul>
-                  <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Detail Booking</button>
-                    <button class="btn btn-outline-secondary btn-lg" type="button" style="font-size: 17px;">Booking</button>
-                  </div>
-                </div>
-              </div>
-            </li>
           </ul>
         </div>
       </section>
@@ -686,10 +542,18 @@
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
   </a>
 
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js" defer></script>
+  <script>
+    function myFunction() {
+      var cardHiddenElements = document.querySelectorAll(".card-hidden");
+      cardHiddenElements.forEach(function(element) {
+        if (element.style.display === "none") {
+            element.style.display = "flex";
+        } else {
+            element.style.display = "none";
+        }
+    });
+    }
+    </script>
 
   <!-- 
     - ionicon link
@@ -701,6 +565,7 @@
     - bootstrap 5
   -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   
 
 </body>
 

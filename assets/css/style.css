@@ -476,9 +476,29 @@ body {
 
 .property .section-text { margin-block: 15px 60px; }
 
-.property-list {
+/* .property-list {
   display: grid;
   gap: 30px;
+} */
+
+.property-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.property-list li {
+  margin: 0 10px; /* Sesuaikan jarak antara item jika diperlukan */
+}
+
+.property-card {
+  width: 450px; /* Atur lebar kartu properti sesuai kebutuhan */
+  /* Tambahan gaya CSS lainnya */
+}
+
+.card-hidden {
+  display: none;
 }
 
 .property-card {
@@ -514,19 +534,41 @@ body {
 .property-card .card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px 15px;
-  padding-block: 30px;
-  border-block: 1px solid var(--gainsboro);
-  margin-block: 30px;
+  justify-content: center;
+  align-items: flex-start; /* Mengatur item agar diatur dari atas */
+  gap: 10px 15px; /* Sesuaikan jarak antara kolom dan baris */
+  padding: 10px 0; /* Ubah padding agar lebih fleksibel */
+  border-top: 1px solid var(--gainsboro); /* Ubah border agar hanya di bagian atas */
+  margin-top: 30px; /* Ubah margin agar lebih fleksibel */
 }
 
 .property-card .card-item {
+  flex-basis: calc(50% - 7.5px); /* Dua kolom */
+  max-width: calc(50% - 7.5px); /* Dua kolom */
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px; /* Jarak antara item */
+}
+
+.property-card .card-items {
+  flex-basis: calc(50% - 7.5px); /* 2 kolom */
+  max-width: calc(50% - 7.5px); /* 2 kolom */
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-bottom: 15px; /* Jarak antar item */
 }
+
+@media (min-width: 768px) {
+  .property-card .card-item,
+  .property-card .card-items {
+    flex-basis: calc(33.33% - 10px); /* 3 kolom */
+    max-width: calc(33.33% - 10px); /* 3 kolom */
+  }
+}
+
 
 .property-card .item-icon {
   color: black;
@@ -563,7 +605,7 @@ body {
 }
 
 .item-text {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 /*-----------------------------------*\
@@ -968,10 +1010,6 @@ body {
   .copyright { margin-block-end: 0; }
 
 }
-
-
-
-
 
 /**
  * responsive for larger than 992px screen
