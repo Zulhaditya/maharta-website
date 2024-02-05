@@ -497,16 +497,19 @@ body {
   /* Tambahan gaya CSS lainnya */
 }
 
-.card-hidden {
+.card-hidden-a,
+.card-hidden-b {
   display: none;
 }
 
-.property-card {
-  position: relative;
-  border-radius: var(--radius-12);
-  box-shadow: var(--shadow-4);
-  overflow: hidden;
-  transition: var(--transition);
+/* property card */
+.cards-wrapper {
+  display: flex;
+}
+
+.card {
+  margin: 0 .7em;
+  width: calc(100%/2);
 }
 
 .property-card:is(:hover, :focus-within) { box-shadow: var(--shadow-5); }
